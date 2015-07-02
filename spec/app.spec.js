@@ -1,4 +1,5 @@
-/*global jasmine,describe,expect,beforeEach,spyOn,it,Person,setName,getName,window,setFixtures,getJSONFixture,sandbox,toBeInDOM*/
+/*global jasmine,describe,xdescribe,expect,beforeEach,afterEach,spyOn,it,Person,
+setName,getName,window,setFixtures,getJSONFixture,sandbox,toBeInDOM, $j*/
 describe('Jasmine basic testing', function () {
   // custom spies
   describe("my own spies", function () {
