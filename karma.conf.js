@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Thu Jul 02 2015 15:04:48 GMT-0300 (Montevideo Standard Time)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -14,9 +14,17 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
+    // https://github.com/karma-runner/karma/issues/481
     files: [
       'src/**/*.js',
-      'spec/**/*.spec.js'
+      'spec/**/*.spec.js',
+      // fixtures
+      {
+        pattern: 'spec/**/*.json',
+        watched: true,
+        served: true,
+        included: false
+      }
     ],
 
 
@@ -62,5 +70,5 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false
-  })
-}
+  });
+};

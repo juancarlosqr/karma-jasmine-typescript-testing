@@ -45,10 +45,11 @@ describe('Jasmine basic testing', function () {
       });
     });
 
-    xdescribe('json fixtures testing', function () {
+    describe('json fixtures testing', function () {
       var data, expectedDataLength;
       beforeEach(function () {
-        jasmine.getJSONFixtures().fixturesPath = '/spec/fixtures/json';
+        // jasmine.getFixtures().fixturesPath didnt work
+        jasmine.getJSONFixtures().fixturesPath =  'base/spec/fixtures/json';
         expectedDataLength = 3;
       });
       it('should load points data from json fixtures', function () {
