@@ -27,24 +27,26 @@ describe('Jasmine basic testing', function () {
     });
   });
 
-  describe('dom testing', function () {
-    beforeEach(function () {
-      setFixtures(sandbox());
+  xdescribe('jasmine-jquery testing', function () {
+    describe('dom testing', function () {
+      beforeEach(function () {
+        setFixtures(sandbox());
+      });
+      it('should find sandbox elem in DOM', function () {
+        expect($('#sandbox')).toBeInDOM();
+      });
     });
-    it('should find sandbox elem in DOM', function () {
-      expect($('#sandbox')).toBeInDOM();
-    });
-  });
 
-  describe('json fixtures testing', function () {
-    var data, expectedDataLength;
-    beforeEach(function () {
-      jasmine.getJSONFixtures().fixturesPath = '/spec/fixtures/json';
-      expectedDataLength = 3;
-    });
-    it('should load points data from json fixtures', function () {
-      data = getJSONFixture('points.json');
-      expect(data.points.length).toBe(expectedDataLength);
+    describe('json fixtures testing', function () {
+      var data, expectedDataLength;
+      beforeEach(function () {
+        jasmine.getJSONFixtures().fixturesPath = '/spec/fixtures/json';
+        expectedDataLength = 3;
+      });
+      it('should load points data from json fixtures', function () {
+        data = getJSONFixture('points.json');
+        expect(data.points.length).toBe(expectedDataLength);
+      });
     });
   });
 });
