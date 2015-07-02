@@ -1,4 +1,4 @@
-/*global describe,expect,beforeEach,spyOn,it,Person,setName,getName*/
+/*global jasmine,describe,expect,beforeEach,spyOn,it,Person,setName,getName,window,setFixtures,getJSONFixture,sandbox,toBeInDOM*/
 describe('Jasmine basic testing', function () {
   // custom spies
   describe("my own spies", function () {
@@ -24,6 +24,27 @@ describe('Jasmine basic testing', function () {
 
     it("should track that return the expected name", function () {
       expect(Person.getName()).toEqual(name);
+    });
+  });
+
+  describe('dom testing', function () {
+    beforeEach(function () {
+      setFixtures(sandbox());
+    });
+    it('should find sandbox elem in DOM', function () {
+      expect($('#sandbox')).toBeInDOM();
+    });
+  });
+
+  describe('json fixtures testing', function () {
+    var data, expectedDataLength;
+    beforeEach(function () {
+      jasmine.getJSONFixtures().fixturesPath = '/spec/fixtures/json';
+      expectedDataLength = 3;
+    });
+    it('should load points data from json fixtures', function () {
+      data = getJSONFixture('points.json');
+      expect(data.points.length).toBe(expectedDataLength);
     });
   });
 });
