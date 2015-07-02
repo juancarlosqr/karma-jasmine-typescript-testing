@@ -3,28 +3,30 @@ setName,getName,window,setFixtures,getJSONFixture,sandbox,toBeInDOM, $j*/
 describe('Jasmine basic testing', function () {
   // custom spies
   describe("my own spies", function () {
-    var name = 'Joe';
+    var name = 'Joe', person;
 
     beforeEach(function () {
+      person = new Person();
       // spy setup
-      spyOn(Person, 'setName').and.callThrough();
+      spyOn(person, 'setName').and.callThrough();
       // app call
-      Person.setName(name);
+      person.setName(name);
     });
 
     it("should objects and methods be defined", function () {
       expect(Person).toBeDefined();
-      expect(Person.name).toBeDefined();
-      expect(Person.setName).toBeDefined();
-      expect(Person.getName).toBeDefined();
+      expect(person).toBeDefined();
+      expect(person.name).toBeDefined();
+      expect(person.setName).toBeDefined();
+      expect(person.getName).toBeDefined();
     });
 
     it("should track that the spy was called with arguments", function () {
-      expect(Person.setName).toHaveBeenCalledWith(name);
+      expect(person.setName).toHaveBeenCalledWith(name);
     });
 
     it("should track that return the expected name", function () {
-      expect(Person.getName()).toEqual(name);
+      expect(person.getName()).toEqual(name);
     });
   });
 

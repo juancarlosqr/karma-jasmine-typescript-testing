@@ -1,15 +1,10 @@
-var Person = {};
-Person = (function () {
-  var name = null,
-    setName = function (name) {
-      this.name = name;
-    },
-    getName = function () {
-      return this.name;
-    };
-
-  return {
-    setName: setName,
-    getName: getName
-  };
-}());
+class Person {
+  name: string;
+  constructor() { }
+  setName (name: string) {
+    this.name = name;
+  }
+  getName () {
+    return this.name;
+  }
+}
