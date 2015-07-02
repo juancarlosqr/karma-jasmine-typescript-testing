@@ -1,5 +1,5 @@
-var Person = Person || {};
-Person = (function(){
+var Person = {};
+Person = (function () {
   var name = null,
     setName = function (name) {
       this.name = name;
@@ -12,4 +12,4 @@ Person = (function(){
     setName: setName,
     getName: getName
   };
-})();
+}());
