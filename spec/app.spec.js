@@ -27,7 +27,14 @@ describe('Jasmine basic testing', function () {
     });
   });
 
-  xdescribe('jasmine-jquery testing', function () {
+  describe('jasmine-jquery testing', function () {
+    var $ = null;
+    beforeEach(function () {
+      $ = $j;
+    });
+    afterEach(function () {
+      $ = null;
+    });
     describe('dom testing', function () {
       beforeEach(function () {
         setFixtures(sandbox());
@@ -37,7 +44,7 @@ describe('Jasmine basic testing', function () {
       });
     });
 
-    describe('json fixtures testing', function () {
+    xdescribe('json fixtures testing', function () {
       var data, expectedDataLength;
       beforeEach(function () {
         jasmine.getJSONFixtures().fixturesPath = '/spec/fixtures/json';
