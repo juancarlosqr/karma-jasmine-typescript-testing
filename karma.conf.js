@@ -50,9 +50,9 @@ module.exports = function (config) {
         removeComments: true // (optional) Do not emit comments to output. 
       },
       // extra typing definitions to pass to the compiler (globs allowed) 
-      // typings: [
-      //   'typings/tsd.d.ts'
-      // ],
+      typings: [
+        'spec/typings/**/*.d.ts'
+      ],
       // transforming the filenames 
       transformPath: function (path) {
         return path.replace(/\.ts$/, '.js');
