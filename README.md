@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/juancarlosqr/karma-jasmine-typescript-testing.svg?branch=master)](https://travis-ci.org/juancarlosqr/karma-jasmine-typescript-testing)
+
 # Testing Typescript with Jasmine on Karma
 
 The main goal of this repo is to play with the next
