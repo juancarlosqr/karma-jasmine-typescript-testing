@@ -1,11 +1,14 @@
 /*global jasmine,describe,xdescribe,expect,beforeEach,afterEach,spyOn,it,Person,
-setName,getName,window,setFixtures,getJSONFixture,sandbox,toBeInDOM, $j*/
-describe('Jasmine basic testing', function () {
-  // custom spies
-  describe("my own spies", function () {
-    var name = 'Joe', person;
+setName,getName,window,setFixtures,getJSONFixture,sandbox,toBeInDOM,$j*/
 
-    beforeEach(function () {
+/// <reference path="../src/app.ts"/>
+
+describe('Jasmine basic testing', () => {
+  // custom spies
+  describe("my own spies", () => {
+    var name: string = 'Joe', person: Person;
+
+    beforeEach(() => {
       person = new Person();
       // spy setup
       spyOn(person, 'setName').and.callThrough();
@@ -13,7 +16,7 @@ describe('Jasmine basic testing', function () {
       person.setName(name);
     });
 
-    it("should objects and methods be defined", function () {
+    it("should objects and methods be defined", () => {
       expect(Person).toBeDefined();
       expect(person).toBeDefined();
       expect(person.name).toBeDefined();
@@ -21,40 +24,40 @@ describe('Jasmine basic testing', function () {
       expect(person.getName).toBeDefined();
     });
 
-    it("should track that the spy was called with arguments", function () {
+    it("should track that the spy was called with arguments", () => {
       expect(person.setName).toHaveBeenCalledWith(name);
     });
 
-    it("should track that return the expected name", function () {
+    it("should track that return the expected name", () => {
       expect(person.getName()).toEqual(name);
     });
   });
 
-  describe('jasmine-jquery testing', function () {
-    var $ = null;
-    beforeEach(function () {
+  describe('jasmine-jquery testing', () => {
+    var $: any = null;
+    beforeEach(() => {
       $ = $j;
     });
-    afterEach(function () {
+    afterEach(() => {
       $ = null;
     });
-    describe('dom testing', function () {
-      beforeEach(function () {
+    describe('dom testing', () => {
+      beforeEach(() => {
         setFixtures(sandbox());
       });
-      it('should find sandbox elem in DOM', function () {
+      it('should find sandbox elem in DOM', () => {
         expect($('#sandbox')).toBeInDOM();
       });
     });
 
-    describe('json fixtures testing', function () {
-      var data, expectedDataLength;
-      beforeEach(function () {
+    describe('json fixtures testing', () => {
+      var data: any, expectedDataLength: number;
+      beforeEach(() => {
         // jasmine.getFixtures().fixturesPath didnt work
         jasmine.getJSONFixtures().fixturesPath =  'base/spec/fixtures/json';
         expectedDataLength = 3;
       });
-      it('should load points data from json fixtures', function () {
+      it('should load points data from json fixtures', () => {
         data = getJSONFixture('points.json');
         expect(data.points.length).toBe(expectedDataLength);
       });

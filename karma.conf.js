@@ -46,7 +46,7 @@ module.exports = function (config) {
         target: 'ES5', // (optional) Specify ECMAScript target version: 'ES3' (default), or 'ES5' 
         module: 'amd', // (optional) Specify module code generation: 'commonjs' or 'amd' 
         noImplicitAny: true, // (optional) Warn on expressions and declarations with an implied 'any' type. 
-        noResolve: true, // (optional) Skip resolution and preprocessing. 
+        noResolve: false, // (optional) Skip resolution and preprocessing. 
         removeComments: true // (optional) Do not emit comments to output. 
       },
       // extra typing definitions to pass to the compiler (globs allowed) 
@@ -61,9 +61,9 @@ module.exports = function (config) {
 
 
     // test results reporter to use
-    // possible values: 'dots', 'progress'
+    // possible values: 'dots', 'progress', 'html', 'coverage'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['dots'],
 
 
     // web server port
@@ -80,16 +80,24 @@ module.exports = function (config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    autoWatch: false,
 
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'PhantomJS'],
+    // browsers: ['PhantomJS', 'ChromeUnsecure', 'IE', 'Firefox'],
+    browsers: ['PhantomJS'],
+
+    customLaunchers: {
+      ChromeUnsecure: {
+        base: 'Chrome',
+        flags: ['--disable-web-security']
+      }
+    },
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: true
   });
 };
