@@ -51,7 +51,7 @@ module.exports = function (config) {
       },
       // extra typing definitions to pass to the compiler (globs allowed) 
       typings: [
-        'spec/typings/**/*.d.ts'
+        'spec/typings/tsd.d.ts'
       ],
       // transforming the filenames 
       transformPath: function (path) {

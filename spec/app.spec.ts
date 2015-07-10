@@ -1,9 +1,11 @@
 /*global jasmine,describe,xdescribe,expect,beforeEach,afterEach,spyOn,it,Person,
-setName,getName,window,setFixtures,getJSONFixture,sandbox,toBeInDOM,$j*/
+setName,getName,window,setFixtures,getJSONFixture,sandbox,toBeInDOM*/
 
 /// <reference path="../src/app.ts"/>
 
 describe('Jasmine basic testing', () => {
+  // by default the '$' (jQuery) doesnt exist, so must be definied. jQuery does exist
+  var $ = jQuery;
   // custom spies
   describe("my own spies", () => {
     var name: string = 'Joe', person: Person;
@@ -34,13 +36,6 @@ describe('Jasmine basic testing', () => {
   });
 
   describe('jasmine-jquery testing', () => {
-    var $: any = null;
-    beforeEach(() => {
-      $ = $j;
-    });
-    afterEach(() => {
-      $ = null;
-    });
     describe('dom testing', () => {
       beforeEach(() => {
         setFixtures(sandbox());
