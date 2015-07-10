@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/juancarlosqr/karma-jasmine-typescript-testing.svg?branch=master)](https://travis-ci.org/juancarlosqr/karma-jasmine-typescript-testing)
+[![Build Status](https://travis-ci.org/juancarlosqr/karma-jasmine-typescript-testing.svg?branch=master)](https://travis-ci.org/juancarlosqr/karma-jasmine-typescript-testing) [![Build Status](https://drone.io/github.com/juancarlosqr/karma-jasmine-typescript-testing/status.png)](https://drone.io/github.com/juancarlosqr/karma-jasmine-typescript-testing/latest)
 
 # Testing Typescript with Jasmine on Karma
 
@@ -14,6 +14,7 @@ The main goal of this repo is to play with the next
 - [Karma Jasmine HTML Reporter](https://www.npmjs.com/package/karma-jasmine-html-reporter)
 - [PhantomJS](http://www.sitepoint.com/headless-webkit-and-phantomjs/)
 - [Travis CI](http://docs.travis-ci.com/)
+- [Drone CI](http://docs.drone.io/quickstart.html)
 
 **With this setup we are looking forward to write code and jasmine tests in typescript, and then run the tests on karma**
 
