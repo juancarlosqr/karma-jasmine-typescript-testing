@@ -70,3 +70,13 @@ This is a npm shorcut, that runs 'karma start karma.config.js' as is definied in
 - [Karma Runner](https://coderwall.com/p/uvxnmq/testing-your-javascript-with-karma-runner)
 - [Karma Runner](http://paislee.io/testing-angularjs-with-grunt-karma-and-jasmine/)
 - [PhantomJS](http://thejsguy.com/2015/02/28/end-to-end-testing-with-phantomsjs-and-casperjs.html)
+
+## What's next
+
+Add 
+
+- [VS Karma Adapter](https://visualstudiogallery.msdn.microsoft.com/4cd59e4a-82e8-4b4e-8302-d102fc81b090)
+- [gulp](https://www.npmjs.com/package/gulp-karma-runner)
+- [gulp](https://www.airpair.com/typescript/posts/typescript-development-with-gulp-and-sublime-text)
+- [tslint](https://www.npmjs.com/package/tslint)
+- [coverage](https://github.com/karma-runner/karma-coverage)
