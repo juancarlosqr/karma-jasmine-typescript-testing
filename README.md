@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/juancarlosqr/karma-jasmine-typescript-testing.svg?branch=master)](https://travis-ci.org/juancarlosqr/karma-jasmine-typescript-testing) [![Build Status](https://drone.io/github.com/juancarlosqr/karma-jasmine-typescript-testing/status.png)](https://drone.io/github.com/juancarlosqr/karma-jasmine-typescript-testing/latest)
+[ ![Codeship Status for juancarlosqr/karma-jasmine-typescript-testing](https://codeship.com/projects/194cee90-12da-0133-5aee-225b415ea37b/status?branch=master)](https://codeship.com/projects/92645) [![Build Status](https://travis-ci.org/juancarlosqr/karma-jasmine-typescript-testing.svg?branch=master)](https://travis-ci.org/juancarlosqr/karma-jasmine-typescript-testing) [![Build Status](https://drone.io/github.com/juancarlosqr/karma-jasmine-typescript-testing/status.png)](https://drone.io/github.com/juancarlosqr/karma-jasmine-typescript-testing/latest)
 
 # Testing Typescript with Jasmine on Karma
 
