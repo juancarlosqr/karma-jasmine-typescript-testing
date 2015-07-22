@@ -12,6 +12,7 @@ The main goal of this repo is to play with the next
 - [Karma Runner](http://karma-runner.github.io/)
 - [Karma Typescript Preprocessor](https://www.npmjs.com/package/karma-typescript-preprocessor)
 - [Karma Jasmine HTML Reporter](https://www.npmjs.com/package/karma-jasmine-html-reporter)
+- [Typedoc](http://typedoc.io/)
 - [PhantomJS](http://www.sitepoint.com/headless-webkit-and-phantomjs/)
 - [Travis CI](http://docs.travis-ci.com/)
 - [Drone CI](http://docs.drone.io/quickstart.html)
@@ -24,12 +25,12 @@ The main goal of this repo is to play with the next
 
 If not, google it!
 
-**Typescript, TSD, Karma-CLI and PhantomJS should be installed in npm as global packages**
+**Typescript, TSD, Typedoc, Karma-CLI and PhantomJS should be installed in npm as global packages**
 
 To install them, do the following
 
 ```
-$ npm i -g typescript tsd karma-cli phantomjs
+$ npm i -g typescript tsd typedoc karma-cli phantomjs 
 ```
 
 ## Install npm packages
@@ -46,6 +47,12 @@ Run the following on command line
 
 ```
 $ npm test
+```
+
+## Generate the documentation
+
+```
+$ npm run docsgen
 ```
 
 This is a npm shorcut, that runs 'karma start karma.config.js' as is definied in the package.json file
