@@ -15,6 +15,7 @@ The main goal of this repo is to play with the next
 - [Typedoc](http://typedoc.io/)
 - [PhantomJS](http://www.sitepoint.com/headless-webkit-and-phantomjs/)
 - [Travis CI](http://docs.travis-ci.com/)
+- [Codeship CI](https://codeship.com)
 - [Drone CI](http://docs.drone.io/quickstart.html)
 
 **With this setup we are looking forward to write code and jasmine tests in typescript, and then run the tests on karma**
